@@ -9,7 +9,7 @@ const getById = id => {
 }
 
 const create = async account => {
-  const [id] = await  db('accounts').where(account)
+  const [id] = await db('accounts').insert(account)
   return getById(id)
 }
 
